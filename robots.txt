@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block sensitive or irrelevant folders (optional, you may adjust)
+Disallow: /private/
+Disallow: /drafts/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://365biblechapter.com/sitemap.xml
