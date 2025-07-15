@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 Bible Chapter – Daily Visual Word of God</title>
+    <meta name="description" content="Discover a new Bible chapter every day through beautiful, verse-inspired visuals. 365 Bible Chapter is a mission to preserve, share, and glorify God's Word creatively through digital media." />
+    <meta name="keywords" content="Bible, Scripture, 365 Bible Chapter, Christian NFT, Verse Images, Evangelism, Jesus Christ, Word of God, Bible Reading, Visual Bible, Bible Art, Daily Scripture" />
+
+
+    <meta property="og:title" content="365 Bible Chapter – God's Word in Every Image">
+    <meta property="og:description" content="One chapter a day. One seed at a time. Explore Bible verses paired with stunning images to inspire faith, truth, and salvation.">
+    <meta property="og:image" content="https://365biblechapter.com/open-graph.png">
+    <meta property="og:image:secure_url" content="https://365biblechapter.com/open-graph.png">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://365biblechapter.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="365 Bible Chapter">
+    <meta property="og:locale" content="en_US">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: rgba(0, 0, 0, 0.3); 
+            background-blend-mode: darken; 
+            z-index: 1000;
+        }
+                .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('web-header.webp') center/cover no-repeat;
+            opacity: 0.7; 
+            z-index: -1; 
+        }
+
+        .logo {
+            position: absolute;
+            left: 5%;
+            width: 60px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu li {
+            display: inline;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #ffffff;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #000000;
+            position: fixed; 
+            top: 20px; 
+            right: 5%;
+            z-index: 1100;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100vh;
+            background: #87cefaf2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            transition: right 0.3s ease-in-out;
+            z-index: 1050;
+        }
+
+        .mobile-menu a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 15px 0;
+            font-size: 18px;
+        }
+
+        .mobile-menu a:hover {
+            color: #87cefa;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+        .social-icons {
+            position: absolute;
+            right: 50px; 
+            top: 48%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .social-icons a img {
+            width: 24px; 
+            height: 24px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.2);
+        }
+        
+        @media (max-width: 480px) {
+            .social-icons {
+                right: 45px; 
+                bottom: 17%;
+            }
+        }
+
+        
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .social-icons {
+                right: 80px; 
+                bottom: 17%;
+            }
+        }
+        
+
+        .social-icons a img {
+            width: 35px;
+            height: 35px;
+        }
+
+.footer {
+    background: #87cefa; 
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff; 
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.opensea-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        z-index: 1000;
+    }
+
+    .opensea-float img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .opensea-float img:hover {
+        transform: scale(1.1);
+    }
+
+ .saved-content {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #f7f7f7;
+  color: #222;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.saved-content h1 {
+  text-align: center;
+  color: #161f28;
+  font-size: 48px;         
+  font-weight: bold;
+  margin-top: 120px;       
+  margin-bottom: 30px;
+}
+
+.highlight {
+  background-color: #fffae6;
+  padding: 10px 15px;
+  border-left: 4px solid #ffbb33;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.saved-content .verse {
+  font-style: italic;
+  margin-top: 10px;
+  color: #333;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta a {
+  display: inline-block;
+  background: #1fa4f7;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.cta a:hover {
+  background: #0d87ce;
+}
+
+.saved-content ul {
+  margin-left: 20px;
+  padding-left: 0;
+  list-style-type: disc;
+}
+.saved-content li {
+  margin-bottom: 8px;
+}
+    </style>
+    
+</head>
+<body>
+
+    <header class="header">
+        <a href="https://365biblechapter.github.io/"></a>
+        <img src="365biblechapter.webp" alt="365biblechapter Logo" class="logo">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="https://365biblechapter.com/#about">About</a></li>
+                <li><a href="https://365biblechapter.com/#Bible">Bible</a></li>
+                <li><a href="https://365biblechapter.com/imageverse-gallery/nft-gallery.html">NFT Art</a></li>
+                <li><a href="https://365biblechapter.com/#prayer">Prayer</a></li>
+                <li><a href="https://365biblechapter.com/#contact">Contact</a></li>
+                <li><a href="https://365biblechapter.com/saved.html" target="_blank">Are you Saved?</a></li>
+                <li><a href="https://365biblechapter.com/support.html" target="_blank">Support</a></li>
+            </ul>
+        </nav>
+         
+    <div class="social-icons">
+        <a href="https://www.youtube.com/@365biblechapter" target="_blank"><img src="YT.webp" alt="YouTube"></a>
+        <a href="https://x.com/365BibleChapter?t=QPxriRsh0enOAm5W6tlXoA&s=09" target="_blank"><img src="X.webp" alt="X.com"></a>
+        <a href="https://opensea.io/collection/the-living-word-2025" target="_blank"><img src="Opensea.webp" alt="Opensea.com"></a>
+    </div>
+
+</div>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="https://365biblechapter.com/#about" onclick="toggleMenu()">About Us</a>
+        <a href="https://365biblechapter.com/#Bible" onclick="toggleMenu()">Bible</a>
+        <a href="https://365biblechapter.com/imageverse-gallery/nft-gallery.html" onclick="toggleMenu()">NFT Art</a>
+        <a href="https://365biblechapter.com/#prayer" onclick="toggleMenu()">Prayer</a>
+        <a href="https://365biblechapter.com/#contact" onclick="toggleMenu()">Contact</a>
+         <a href="https://365biblechapter.com/saved.html" target="_blank" onclick="toggleMenu()">Are you Saved?</a>
+        <a href="https://365biblechapter.com/support.html" target="_blank" onclick="toggleMenu()">Support</a>
+    </div>
+
+    
+
+
+
+<section class="saved-content">
+ <h1>Are You Saved?</h1>
+
+<p>The Bible asks us to examine ourselves to see whether we are in the faith <span class="verse">(2 Corinthians 13:5)</span>. But salvation is not found in religion, rituals, or good deeds. It is found in a person: <strong>Jesus Christ</strong>. And the true Gospel is found in one place: <strong>1 Corinthians 15:1–4</strong>.</p>
+
+<div class="highlight">
+  “Christ died for our sins according to the scriptures; and that he was buried, and that he rose again the third day according to the scriptures.”
+  <div class="verse">1 Corinthians 15:3–4</div>
+</div>
+
+<p>This is not about what you <em>do</em> for God. It's about what <strong>Jesus already did</strong> for you. He shed His blood on the cross to fully pay for your sins. Then He was buried, and He rose again, proving He is Lord.</p>
+
+<h2>The Gospel Has 5 Truths:</h2>
+<ul>
+  <li>Christ <strong>died</strong></li>
+  <li><strong>For our sins</strong></li>
+  <li><strong>Was buried</strong></li>
+  <li><strong>Rose again</strong></li>
+  <li><strong>According to the Scriptures</strong></li>
+</ul>
+
+<p>That’s it. No more. No less. The blood of Jesus is the only payment God accepts.</p>
+
+<h2>How Can I Be Saved?</h2>
+<p>Salvation is by grace through <strong>faith</strong>, not by works, church membership, or even water baptism. The Bible says:</p>
+
+<div class="highlight">
+  “For by grace are ye saved through faith... not of works, lest any man should boast.”
+  <div class="verse">Ephesians 2:8–9</div>
+</div>
+
+<p>You are saved the moment you place your full trust—not in yourself—but in the <strong>finished work of Jesus Christ</strong> and His shed blood.</p>
+
+<h2>Faith in His Blood</h2>
+<p>The Bible says we are saved:</p>
+
+<div class="highlight">
+  “Through faith in His blood...”
+  <div class="verse">Romans 3:25</div>
+</div>
+
+<p>That blood was sprinkled on the mercy seat in Heaven, and it still speaks today: mercy, forgiveness, and eternal life.</p>
+
+<div class="cta">
+  <a href="https://www.biblegateway.com/passage/?search=1+Corinthians+15%3A1-4&version=KJV" target="_blank">Read the Gospel Now</a>
+</div>
+
+<div class="cta" style="margin-top: 30px;">
+  <a href="mailto:seed@365biblechapter.com">I believed. Tell me more</a>
+</div>
+</section>
+    
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://365biblechapter.com/cookie-policy.html">Privacy Policy</a> |
+            <a href="https://365biblechapter.com/terms-and-conditions.html">Terms & Conditions</a> |
+            <a href="https://365biblechapter.com/cookie-policy.html">Cookie Policy</a>
+        </div>
+        <p class="copyright">© 2025 - 365 Bible Chapter. All Rights Reserved.</p>
+    </footer>
+    
+
+    <script>
+        function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    if (menu.style.right === "0px") {
+        menu.style.right = "-100%"; 
+        document.removeEventListener("click", closeMenuOnOutsideClick);
+    } else {
+        menu.style.right = "0px";
+        setTimeout(() => {
+            document.addEventListener("click", closeMenuOnOutsideClick);
+        }, 10);
+    }
+        }
+        function closeMenuOnOutsideClick(event) {
+    var menu = document.getElementById("mobileMenu");
+    var toggleButton = document.querySelector(".menu-toggle");
+
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+        menu.style.right = "-100%"; 
+        document.removeEventListener("click", closeMenuOnOutsideClick);
+    }
+}
+
+    </script>
+
+<a href="https://opensea.io/collection/the-living-word-2025" class="opensea-float" target="_blank" aria-label="OpenSea">
+    <img src="opensea.webp" alt="OpenSea">
+</a>
+
+
+</body>
+</html>

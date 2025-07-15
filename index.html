@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 Bible Chapter – Daily Visual Word of God</title>
+    <meta name="description" content="Discover a new Bible chapter every day through beautiful, verse-inspired visuals. 365 Bible Chapter is a mission to preserve, share, and glorify God's Word creatively through digital media." />
+    <meta name="keywords" content="Bible, Scripture, 365 Bible Chapter, Christian NFT, Verse Images, Evangelism, Jesus Christ, Word of God, Bible Reading, Visual Bible, Bible Art, Daily Scripture" />
+
+    <meta property="og:title" content="365 Bible Chapter – God's Word in Every Image">
+    <meta property="og:description" content="One chapter a day. One seed at a time. Explore Bible verses paired with stunning images to inspire faith, truth, and salvation.">
+    <meta property="og:image" content="https://365biblechapter.com/open-graph.png">
+    <meta property="og:image:secure_url" content="https://365biblechapter.com/open-graph.png">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://365biblechapter.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="365 Bible Chapter">
+    <meta property="og:locale" content="en_US">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: rgb(255, 255, 255);
+        }
+
+        .hero {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: url('hero.webp') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 70px;
+            top: 90px;
+            position: relative;
+            z-index: 2; 
+            color: rgb(0, 0, 0); 
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0); 
+        }
+
+        @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 36px; 
+            margin-bottom: 40px;
+            top: 50px;
+        }
+        }
+
+        @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 50px; 
+            margin-bottom: 30px;
+            top: 30px;
+        }
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 80px;
+            padding: 12px 24px;
+            background-color: #1fa4f7;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .hero-button:hover {
+            background-color: #87cefa;
+            transform: scale(1.05);
+        }
+
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: rgba(0, 0, 0, 0.3); 
+            background-blend-mode: darken; 
+            z-index: 1000;
+        }
+                .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('web-header.webp') center/cover no-repeat;
+            opacity: 0.7; 
+            z-index: -1; 
+        }
+
+        .logo {
+            position: absolute;
+            left: 5%;
+            width: 60px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu li {
+            display: inline;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #ffffff;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #000000;
+            position: fixed; 
+            top: 20px; 
+            right: 5%;
+            z-index: 1100;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100vh;
+            background: #87cefaf2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            transition: right 0.3s ease-in-out;
+            z-index: 1050;
+        }
+
+        .mobile-menu a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 15px 0;
+            font-size: 18px;
+        }
+
+        .mobile-menu a:hover {
+            color: #87cefa;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+        .social-icons {
+            position: absolute;
+            right: 50px; 
+            top: 48%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .social-icons a img {
+            width: 24px; 
+            height: 24px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.2);
+        }
+        
+        @media (max-width: 480px) {
+            .social-icons {
+                right: 45px; 
+                bottom: 17%;
+            }
+        }
+
+        
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .social-icons {
+                right: 80px; 
+                bottom: 17%;
+            }
+        }
+        
+
+        .social-icons a img {
+            width: 35px;
+            height: 35px;
+        }
+
+
+        
+        .about-us {
+            padding: 70px 5%;
+            background: #87cefa; 
+            color: black;       
+            text-align: center;
+            position: relative;
+            width: 100vw;
+            min-height: 100vh;
+        }
+
+
+
+        .about-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap; 
+        }
+
+
+        .about-text {
+            max-width: 400px; 
+            text-align: left;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
+        }
+
+        .about-text h1 {
+            text-align: center; 
+            font-size: 65px; 
+            font-weight: bold;
+            margin-bottom: 0px;
+            position: relative;
+            z-index: 2; 
+            color: rgb(0, 0, 0); 
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0); 
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%; 
+        text-align: center;
+    }
+
+    .about-text h1 {
+        font-size: 50px; 
+    }
+
+    .about-image img {
+        max-width: 90%; 
+    }
+}
+
+.nft-section {
+    background-color: #161f28ff;
+    color: rgb(0, 0, 0);
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.nft-section h1 {
+    font-size: 65px; 
+    font-weight: bold;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 2; 
+    color: rgb(0, 0, 0); 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0); 
+}
+
+.nft-section h3 {
+    font-size: 24px; 
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+.nft-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    justify-content: center; 
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+
+.nft-item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+.nft-desc {
+    font-size: 0.9rem;  
+    color: #000000;  
+    margin-top: 5px;  
+    text-align: center;  
+}
+.prayer {
+    padding: 50px 5%;
+    background: url('Ancient_Jericho_Walls.webp') no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.prayer:before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); 
+    z-index: 0;
+}
+.prayer h2 {
+    font-size: 65px; 
+    font-weight: bold;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 2; 
+    color: rgb(0, 0, 0); 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0); 
+}
+
+
+.where-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#prayer {
+    background-image: url('Ancient_Jericho_Walls.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    color: rgb(0, 0, 0); 
+    text-align: center;
+}
+@media (max-width: 1024px) {
+    .prayer {
+        width: 100vw; 
+        padding: 40px 4%;
+        min-height: 80vh;
+    }
+}
+@media (max-width: 767px) {
+    .prayer {
+        width: 100vw; 
+        padding: 30px 3%;
+        min-height: 70vh;
+        margin: 0 auto;
+    }
+}
+.Bible-section {
+    padding: 100px 5%;
+    background: url('Serene Cliffside Vista.webp') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+.Bible-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); 
+    z-index: 0;
+}
+
+.Bible-section * {
+    position: relative;
+    z-index: 1;
+}
+
+.Bible-section .section-title {
+    font-size: 65px; 
+    font-weight: bold;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 2; 
+    color: rgb(0, 0, 0); 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0); 
+}
+
+
+
+.tier-light {
+  color: #1f3b8b; 
+}
+
+.tier-fire {
+  color: #e63946; 
+}
+
+.tier-glory {
+  color: #d4af37; 
+}
+.nft-image-zoom {
+  cursor: zoom-in;
+  display: inline-block;
+}
+
+.nft-image-zoom img {
+  transition: transform 0.3s ease;
+}
+
+.nft-image-zoom:hover img {
+  transform: scale(1.05);
+}
+
+.nft-section {
+    background-color: #c0daea;
+    color: rgb(0, 0, 0);
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.nft-category h3 {
+    margin-top: 40px;  
+    margin-bottom: 20px; 
+    font-size: 1.8rem;
+}
+
+.nft-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 20px auto; 
+    padding-top: 10px; 
+}
+
+.nft-item {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.nft-desc {
+  font-size: 16px;
+  margin: 6px 0;
+  font-weight: 500;
+  display: inline-block;
+  background: #e8f4ff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #000;
+}
+
+.nft-tier-info {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  color: #333;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .nft-grid {
+        grid-template-columns: 1fr; 
+        gap: 24px;
+    }
+
+    .nft-item img {
+        max-width: 80vw; 
+        margin: 0 auto;
+        display: block;
+    }
+
+    .nft-item {
+        padding: 24px;
+    }
+
+    .nft-desc {
+        font-size: 18px; 
+    }
+}
+.contact-section {
+    padding: 50px 5%;
+    background: white;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+            }
+
+
+
+.contact-section .section-title,
+.contact-icons {
+    font-size: 65px; 
+    font-weight: bold;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 2; 
+    color: rgb(0, 0, 0); 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0); 
+    position: relative;
+    z-index: 2; 
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 120px;
+}
+
+
+.contact-icons a {
+    width: 100px;
+    height: 100px;
+}
+
+
+.contact-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+@media (max-width: 768px) {
+    .contact-icons {
+        max-width: 320px; 
+        margin: 0 auto; 
+    }
+
+    .contact-icons a {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.contact-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.footer {
+    background: #87cefa; 
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff; 
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="https://365biblechapter.github.io/"></a>
+        <img src="365biblechapter.webp" alt="365biblechapter Logo" class="logo">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#Bible">Bible</a></li>
+                <li><a href="https://365biblechapter.com/imageverse-gallery/nft-gallery.html">NFT Art</a></li>
+                <li><a href="#prayer">Prayer</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://365biblechapter.com/saved.html" target="_blank">Are you Saved?</a></li>
+                <li><a href="https://365biblechapter.com/support.html" target="_blank">Support</a></li>
+            </ul>
+        </nav>
+         
+    <div class="social-icons">
+        <a href="https://www.youtube.com/@365biblechapter" target="_blank"><img src="YT.webp" alt="YouTube"></a>
+        <a href="https://x.com/365BibleChapter?t=QPxriRsh0enOAm5W6tlXoA&s=09" target="_blank"><img src="X.webp" alt="X.com"></a>
+        <a href="https://opensea.io/collection/the-living-word-2025 " target="_blank"><img src="Opensea.webp" alt="Opensea.com"></a>
+    </div>
+
+</div>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#Bible" onclick="toggleMenu()">Bible</a>
+        <a href="https://365biblechapter.com/imageverse-gallery/nft-gallery.html" onclick="toggleMenu()">NFT Art</a>
+        <a href="#prayer" onclick="toggleMenu()">Prayer</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+        <a href="https://365biblechapter.com/saved.html" target="_blank" onclick="toggleMenu()">Are you Saved?</a>
+        <a href="https://365biblechapter.com/support.html" target="_blank" onclick="toggleMenu()">Support</a>
+    </div>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Bible, Prayer,<br>NFT Art</h1>
+            <a href="#Bible" class="hero-button">Get Free Bible</a>
+        </div>
+    </div>
+
+
+<section id="about" class="about-us">
+    <div class="about-container">
+        <div class="about-text">
+            <h1>About</h1>
+            <p>365 Bible Chapter started with a simple desire to help people see the Bible come alive. In a time when many scroll through empty content, we wanted every scroll to plant a seed of truth. Each image we create is based on a chapter of Scripture, paired with visuals that carry meaning, reverence, and beauty. We believe God’s Word is living and active, and that even one verse can change a life. This is not just an art project; it’s a digital mission to reach hearts, preserve truth, and glorify Jesus Christ.</p>
+            <br>
+            <p>To keep this mission going, some of our verse-based images are made available as digital art collectibles. All proceeds go directly to funding Bible distribution, mission printing, and creative evangelism efforts. Whether someone receives a free Bible, discovers a verse online, or is drawn in by the artwork, our goal is the same: to make the Word of God easy to access, hard to forget, and impossible to silence. One chapter at a time. One soul at a time. All glory to God.</p>
+        </div>
+        <div class="about-image">
+            <img src="bible.webp"  loading="lazy" alt="About Us">
+        </div>
+    </div>
+</section> 
+
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+
+<section id="Bible" class="Bible-section">
+          <h2 style="font-size: 48px; margin-bottom: 20px;">📖 Request a Bible</h2>
+  <p style="font-size: 20px; max-width: 700px; margin: 0 auto 30px;">
+    Don't have a Bible of your own? Whether you’re seeking truth, hope, or a fresh beginning, God’s Word is the seed of life. Fill the form below and we’ll do our best to send a copy or direct you to a trusted source.
+  </p>
+<p style="font-size: 20px; max-width: 700px; margin: 0 auto 30px;">
+  ▶️ Prefer to watch and listen? Explore our daily Bible chapter readings through video, created to plant God's Word visually and audibly into hearts around the world.
+</p>
+
+<div style="text-align: center; margin-bottom: 40px;">
+  <a href="https://www.youtube.com/@365biblechapter" target="_blank" style="display: inline-block; background: #1fa4f7; color: rgb(0, 0, 0); padding: 12px 25px; text-decoration: none; border-radius: 8px; font-size: 18px; transition: background 0.3s; font-weight: bold;">
+    ▶️ Watch Bible Videos
+  </a>
+</div>
+
+  <a href="https://forms.office.com/r/VSnbssmhdD" style="background-color: #1fa4f7; color: rgb(0, 0, 0); padding: 14px 30px; font-size: 18px; border-radius: 8px; font-weight: bold; text-decoration: none;">✉️ Request Bible Worldwide</a>
+</section>
+
+<section id="nft" class="nft-section">
+    <h1>NFT Art</h1>
+    
+    
+    <div class="nft-category">
+        <h3 class="tier-light">Light Tier</h3>
+        <p class="nft-tier-info">Entry Tier</p>
+        <div class="nft-grid">
+
+            <div class="nft-item">
+            <div class="nft-image-zoom" onclick="openModal('Rock_of_Revelation.webp')">
+                <img src="Rock_of_Revelation.webp" loading="lazy" alt="Rock of Revelation">
+            </div>
+            <p class="nft-desc" style="font-size: 20px;"><b>Rock of Revelation</b></p>
+            <p class="nft-desc">Angular Stone</p>
+            <p class="nft-desc">Upon This Rock</p>
+            <p class="nft-desc">Foundation, Revelation</p>
+            <p class="nft-desc">
+                <a href="https://365biblechapter.com/imageverse-gallery/nft.html?id=imageverse003" target="_blank" style="text-decoration: underline; color: #093869;">
+                More info
+                </a>
+            </p>
+            </div>
+
+
+             <div class="nft-item">
+            <div class="nft-image-zoom" onclick="openModal('Rooted_by_the_Stream.webp')">
+                <img src="Rooted_by_the_Stream.webp" loading="lazy" alt="Rooted by the Stream">
+            </div>
+                <p class="nft-desc" style="font-size: 20px;"><b>Rooted by the Stream</b></p>
+                <p class="nft-desc">Mossy Stone</p>
+                <p class="nft-desc">Planted by the Waters</p>
+                <p class="nft-desc">Fruitfulness, Meditation</p>
+                <p class="nft-desc">
+                    <a href="https://365biblechapter.com/imageverse-gallery/nft.html?id=imageverse004" target="_blank" style="text-decoration: underline; color: #093869;">
+                        More info
+                    </a>
+                </p>
+            </div>
+            
+                <div class="nft-item">
+            <div class="nft-image-zoom" onclick="openModal('Cracked_Open_at_Dawn.webp')">
+                <img src="Cracked_Open_at_Dawn.webp" loading="lazy" alt="Cracked Open at Dawn">
+            </div>
+                <p class="nft-desc" style="font-size: 20px;"><b>Cracked Open at Dawn</b></p>
+                <p class="nft-desc">Broken Eggshell</p>
+                <p class="nft-desc">Dawn Breakthrough</p>
+                <p class="nft-desc">Newness, Breakthrough</p>
+                <p class="nft-desc">
+                    <a href="https://365biblechapter.com/imageverse-gallery/nft.html?id=imageverse061" target="_blank" style="text-decoration: underline; color: #093869;">
+                        More info
+                    </a>
+                </p>                             
+            </div>
+            
+                <div class="nft-item">
+            <div class="nft-image-zoom" onclick="openModal('Dust_in_the_Current.webp')">
+                <img src="Dust_in_the_Current.webp" loading="lazy" alt="Dust in the Current">
+            </div>
+                <p class="nft-desc" style="font-size: 20px;"><b>Dust in the Current</b></p>
+                <p class="nft-desc">Swirling Dust</p>
+                <p class="nft-desc">God's Unseen Move</p>
+                <p class="nft-desc">Movement, Justice</p>
+                <p class="nft-desc">
+                    <a href="https://365biblechapter.com/imageverse-gallery/nft.html?id=imageverse023" target="_blank" style="text-decoration: underline; color: #093869;">
+                        More info
+                    </a>
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="nft-category">
+        <h3 class="tier-fire">Fire Tier</h3>
+        <p class="nft-tier-info">Middle Tier</p>
+        <div class="nft-grid">
+        <div class="nft-item">
+            <div class="nft-image-zoom" onclick="openModal('Judgment,_Cup_of_Wrath.webp')">
+                <img src="Judgment,_Cup_of_Wrath.webp" loading="lazy" alt="Judgment, Cup of Wrath">
+            </div>
+                <p class="nft-desc" style="font-size: 20px;"><b>Judgment, Cup of Wrath</b></p>
+                <p class="nft-desc">Brass Cup</p>
+                <p class="nft-desc">Wrath / Judgment</p>
+                <p class="nft-desc">Judgment</p>
+                <p class="nft-desc">
+                <a href="https://365biblechapter.com/imageverse-gallery/nft.html?id=imageverse013" target="_blank" style="text-decoration: underline; color: #093869;">
+                More info
+            </a>
+        </p>
+    </div>
+
+        <div class="nft-item">
+            <div class="nft-image-zoom" onclick="openModal('Plagues_and_Promises.webp')">
+                <img src="Plagues_and_Promises.webp" loading="lazy" alt="Plagues and Promises">
+            </div>
+                <p class="nft-desc" style="font-size: 20px;"><b>Plagues and Promises</b></p>
+                <p class="nft-desc">Frog</p>
+                <p class="nft-desc">Judgment on Egypt</p>
+                <p class="nft-desc">Plague, Judgment</p>
+                <p class="nft-desc">
+                <a href="https://365biblechapter.com/imageverse-gallery/nft.html?id=imageverse003" target="_blank" style="text-decoration: underline; color: #093869;">
+                More info
+                </a>
+                </p>
+</div>
+        </div>
+    </div>
+
+
+    <div class="nft-category">
+        <h3 class="tier-glory">Glory Tier</h3>
+        <p class="nft-tier-info">Highest Tier</p>
+        <div class="nft-grid">
+        <div class="nft-item">
+
+            <div class="nft-image-zoom" onclick="openModal('Majesty,_Throne_Presence.webp')">
+                <img src="Majesty,_Throne_Presence.webp" loading="lazy" alt="Majesty, Throne Presence">
+            </div>
+                <p class="nft-desc" style="font-size: 20px;"><b>Majesty, Throne Presence</b></p>
+                <p class="nft-desc">Light from Clouds</p>
+                <p class="nft-desc">Heavenly Glory</p>
+                <p class="nft-desc">Majesty</p>
+                <p class="nft-desc">
+                    <a href="https://365biblechapter.com/imageverse-gallery/nft.html?id=imageverse019" target="_blank" style="text-decoration: underline; color: #093869;">
+                        More info
+                    </a>
+                </p>
+            </div>
+            
+                <div class="nft-item">
+            <div class="nft-image-zoom" onclick="openModal('Wilderness_Wisdom,_Divine_Guidance.webp')">
+                <img src="Wilderness_Wisdom,_Divine_Guidance.webp" loading="lazy" alt="Wilderness Wisdom, Divine Guidance">
+            </div>
+                <p class="nft-desc" style="font-size: 20px;"><b>Wilderness Wisdom, Divine Guidance</b></p>
+                <p class="nft-desc">Wind Patterned Dunes</p>
+                <p class="nft-desc">Paths in the Wilderness</p>
+                <p class="nft-desc">Wilderness, Guidance</p>
+                <p class="nft-desc">
+                    <a href="https://365biblechapter.com/imageverse-gallery/nft.html?id=imageverse015" target="_blank" style="text-decoration: underline; color: #093869;">
+                        More info
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="prayer" class="prayer">
+  <div class="where-container" style="text-align: center; padding: 80px 20px; background-color: #f0f8ff44;">
+    <h2 style="font-size: 42px; margin-bottom: 15px;">Prayer Request</h2>
+    
+    <p style="font-style: italic; color: #444; font-size: 18px; margin-bottom: 20px;">
+      “The effectual fervent prayer of a righteous man availeth much.” <br>
+      <span style="font-size: 16px;">James 5:16 (KJV)</span>
+    </p>
+
+    <p style="max-width: 700px; margin: 0 auto 30px; font-size: 18px; line-height: 1.7;">
+      You are not alone. Whether you're facing trials, need healing, or simply long to be heard, send us your prayer request. 
+      We have a dedicated team that lifts up every request before the Lord in faith and love.
+    </p>
+
+    <div class="cta" style="margin-top: 30px;">
+      <a href="https://forms.office.com/r/Us9LAF7uq9?origin=lprLink"
+         style="
+           background-color: #1fa4f7;
+           color: rgb(0, 0, 0);
+           padding: 12px 30px;
+           border-radius: 8px;
+           font-size: 16px;
+           font-weight: bold;
+           text-decoration: none;
+           display: inline-block;
+           max-width: 90vw;
+           box-sizing: border-box;
+         ">
+        ✉️ Send Prayer Request
+      </a>
+    </div>
+  </div>
+</section>
+   
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <h1 class="section-title">Contact</h1>
+        <div class="contact-icons">
+            <a href="https://wa.me/6590410962"  
+            target="_blank">
+                <img src="whatsapp.webp" loading="lazy" alt="WhatsApp">
+            </a>
+            <a href="mailto:seed@365biblechapter.com">
+                <img src="gmail.webp" loading="lazy" alt="Email">
+            </a>
+            <a href="https://linktr.ee/365biblechapter?utm_source=linktree_admin_share" target="_blank">
+                <img src="Linktree.webp" loading="lazy" alt="Linktree">
+            </a>
+            <a href="https://www.facebook.com/share/19F7mFNJtD/" target="_blank">
+                <img src="facebook.webp" loading="lazy" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com/@365biblechapter" target="_blank">
+                <img src="instagram.webp" loading="lazy" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@365biblechapter?_t=ZP-8x5Ys6IbEoJ&_r=1 " target="_blank">
+                <img src="tiktok.webp" loading="lazy" alt="TikTok">
+            </a>
+        </div>
+    </section>  
+    
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://365biblechapter.com/cookie-policy.html">Privacy Policy</a> |
+            <a href="https://365biblechapter.com/terms-and-conditions.html">Terms & Conditions</a> |
+            <a href="https://365biblechapter.com/cookie-policy.html">Cookie Policy</a>
+        </div>
+        <p class="copyright">© 2025 - 365 Bible Chapter. All Rights Reserved.</p>
+    </footer>
+    
+
+    <script>
+        function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    if (menu.style.right === "0px") {
+        menu.style.right = "-100%"; 
+        document.removeEventListener("click", closeMenuOnOutsideClick);
+    } else {
+        menu.style.right = "0px";
+        setTimeout(() => {
+            document.addEventListener("click", closeMenuOnOutsideClick);
+        }, 10);
+    }
+        }
+        function closeMenuOnOutsideClick(event) {
+    var menu = document.getElementById("mobileMenu");
+    var toggleButton = document.querySelector(".menu-toggle");
+
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+        menu.style.right = "-100%"; 
+        document.removeEventListener("click", closeMenuOnOutsideClick);
+    }
+}
+
+document.addEventListener("contextmenu", function (event) {
+        if (event.target.tagName === "IMG") {
+            event.preventDefault();
+        }
+    });
+
+
+    document.addEventListener("dragstart", function (event) {
+        if (event.target.tagName === "IMG") {
+            event.preventDefault();
+        }
+    });
+
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "PrintScreen") {
+            event.preventDefault();
+        }
+    });
+
+
+    document.addEventListener("keyup", function (event) {
+        if (event.key === "PrintScreen") {
+            navigator.clipboard.writeText(""); 
+        }
+    });
+
+
+    document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey && (event.key === "u" || event.key === "U" || 
+            event.key === "i" || event.key === "I" || event.key === "j" || event.key === "J" || 
+            event.key === "c" || event.key === "C" || event.key === "s" || event.key === "S")) {
+            event.preventDefault();
+            alert("Developer tools are disabled on this site.");
+        }
+        if (event.key === "F12") {
+            event.preventDefault();
+            alert("Developer tools are disabled.");
+        }
+    });
+    </script>
+    <script>
+        function openModal(imageSrc) {
+    document.getElementById("zoomModal").style.display = "flex";
+    document.getElementById("modalImg").src = imageSrc;
+  }
+
+  function closeModal(event) {
+    if (event) event.stopPropagation();
+    document.getElementById("zoomModal").style.display = "none";
+  }
+  
+      </script>
+
+<a href="https://opensea.io/collection/the-living-word-2025" class="opensea-float" target="_blank" aria-label="OpenSea">
+    <img src="opensea.webp" alt="OpenSea">
+</a>
+
+<style>
+        .opensea-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        z-index: 1000;
+    }
+
+    .opensea-float img {
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .opensea-float img:hover {
+        transform: scale(1.1);
+    }
+
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .modal img {
+    max-width: 100%;
+    max-height: 90vh; 
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50px; 
+}
+
+  @media (min-width: 768px) {
+    .modal-content {
+      max-width: 60%; 
+    }
+  }
+</style>
+
+<div id="zoomModal" class="modal" onclick="closeModal()">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal(event)">X</button>
+        <img id="modalImg" src="" alt="Zoomed Image">
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 Bible Chapter – Daily Visual Word of God</title>
+    <meta name="description" content="Discover a new Bible chapter every day through beautiful, verse-inspired visuals. 365 Bible Chapter is a mission to preserve, share, and glorify God's Word creatively through digital media." />
+    <meta name="keywords" content="Bible, Scripture, 365 Bible Chapter, Christian NFT, Verse Images, Evangelism, Jesus Christ, Word of God, Bible Reading, Visual Bible, Bible Art, Daily Scripture" />
+
+    <meta property="og:title" content="365 Bible Chapter – God's Word in Every Image">
+    <meta property="og:description" content="One chapter a day. One seed at a time. Explore Bible verses paired with stunning images to inspire faith, truth, and salvation.">
+    <meta property="og:image" content="https://365biblechapter.com/open-graph.png">
+    <meta property="og:image:secure_url" content="https://365biblechapter.com/open-graph.png">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://365biblechapter.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="365 Bible Chapter">
+    <meta property="og:locale" content="en_US">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: rgb(0, 0, 0);
+        }
+
+
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: rgba(0, 0, 0, 0.3); 
+            background-blend-mode: darken; 
+            z-index: 1000;
+        }
+                .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('web-header.webp') center/cover no-repeat;
+            opacity: 0.7; 
+            z-index: -1; 
+        }
+
+        .logo {
+            position: absolute;
+            left: 5%;
+            width: 60px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu li {
+            display: inline;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #ffffff;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #000000;
+            position: fixed; 
+            top: 20px; 
+            right: 5%;
+            z-index: 1100;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100vh;
+            background: #87cefaf2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            transition: right 0.3s ease-in-out;
+            z-index: 1050;
+        }
+
+        .mobile-menu a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 15px 0;
+            font-size: 18px;
+        }
+
+        .mobile-menu a:hover {
+            color: #87cefa;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+        .social-icons {
+            position: absolute;
+            right: 50px; 
+            top: 48%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .social-icons a img {
+            width: 24px; 
+            height: 24px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.2);
+        }
+        
+        @media (max-width: 480px) {
+            .social-icons {
+                right: 45px; 
+                bottom: 17%;
+            }
+        }
+
+        
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .social-icons {
+                right: 80px; 
+                bottom: 17%;
+            }
+        }
+        
+
+        .social-icons a img {
+            width: 35px;
+            height: 35px;
+        }
+
+
+
+        .support-section {
+    padding: 100px 5% 60px; 
+    background-color: #87cefa;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+        .support-section h1 {
+    font-size: 48px;
+    color: #161f28;
+    margin-bottom: 10px;
+    margin-top: 20px; 
+}
+        .support-section p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+        .support-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            font-size: 16px;
+            color: white;
+            background-color: #1fa4f7;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .support-buttons a:hover {
+            background-color: #1fa4f7;
+        }
+        .crypto-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    display: inline-block;
+    text-align: left;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+        .crypto-box code {
+            display: block;
+            font-size: 14px;
+            margin-top: 5px;
+            color: #222;
+        }
+.footer {
+    background: #87cefa; 
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff; 
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .crypto-box div[style*="grid-template-columns"] {
+    display: block !important;
+  }
+
+  .crypto-box code {
+    margin-bottom: 20px;
+    display: block;
+  }
+}
+.wallet-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wallet-grid code {
+    word-break: break-all;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .wallet-grid {
+        display: block;
+    }
+
+    .wallet-grid div {
+        margin-bottom: 10px;
+    }
+
+    .wallet-grid code {
+        margin-bottom: 20px;
+        display: block;
+    }
+}
+.crypto-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.crypto-header h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #161f28;
+}
+
+        .opensea-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        z-index: 1000;
+    }
+
+    .opensea-float img {
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .opensea-float img:hover {
+        transform: scale(1.1);
+    }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="https://365biblechapter.github.io/"></a>
+        <img src="365biblechapter.webp" alt="365biblechapter Logo" class="logo">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="https://365biblechapter.com/#about">About</a></li>
+                <li><a href="https://365biblechapter.com/#Bible">Bible</a></li>
+                <li><a href="https://365biblechapter.com/imageverse-gallery/nft-gallery.html">NFT Art</a></li>
+                <li><a href="https://365biblechapter.com/#prayer">Prayer</a></li>
+                <li><a href="https://365biblechapter.com/#contact">Contact</a></li>
+                <li><a href="https://365biblechapter.com/saved.html" target="_blank">Are you Saved?</a></li>
+                <li><a href="https://365biblechapter.com/support.html" target="_blank">Support</a></li>
+            </ul>
+        </nav>
+         
+    <div class="social-icons">
+        <a href="https://www.youtube.com/@365biblechapter" target="_blank"><img src="YT.webp" alt="YouTube"></a>
+        <a href="https://x.com/365BibleChapter?t=QPxriRsh0enOAm5W6tlXoA&s=09" target="_blank"><img src="X.webp" alt="X.com"></a>
+        <a href="https://opensea.io/collection/the-living-word-2025" target="_blank"><img src="Opensea.webp" alt="Opensea.com"></a>
+    </div>
+
+</div>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="https://365biblechapter.com/#about" onclick="toggleMenu()">About Us</a>
+        <a href="https://365biblechapter.com/#Bible" onclick="toggleMenu()">Bible</a>
+        <a href="https://365biblechapter.com/imageverse-gallery/nft-gallery.html" onclick="toggleMenu()">NFT Art</a>
+        <a href="https://365biblechapter.com/#prayer" onclick="toggleMenu()">Prayer</a>
+        <a href="https://365biblechapter.com/#contact" onclick="toggleMenu()">Contact</a>
+        <a href="https://365biblechapter.com/saved.html" target="_blank" onclick="toggleMenu()">Are you Saved?</a>
+        <a href="https://365biblechapter.com/support.html" target="_blank" onclick="toggleMenu()">Support</a>
+    </div>
+
+
+
+    <!-- Support Section -->
+    <section class="support-section">
+        <h1>Support the Mission</h1>
+        <p>
+            365 Bible Chapter is a mission-driven project to preserve and share God's Word through visual scripture, verse art, and digital evangelism. Everything we create is freely offered to glorify Jesus and plant seeds of truth across the world.
+        </p>
+        <p>
+            If you'd like to support our efforts, including Bible printing, verse media, and gospel tools, you can give through any of the options below. Every seed helps spread the Word.
+        </p>
+
+        <div class="support-buttons">
+            <a href="https://ko-fi.com/365biblechapter" target="_blank">☕ Ko-fi</a>
+            <a href="https://paypal.me/365biblechapter" target="_blank">PayPal</a>
+        </div>
+
+<div class="crypto-box">
+    <div class="crypto-header">
+        <h3>Crypto Wallets</h3>
+        <p>If you’d like to give in crypto, here are the wallet addresses:</p>
+    </div>
+    <div class="wallet-grid">
+        <div>🪙 <strong>BTC (Bitcoin)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=0&address=bc1qfm4lhg6frkmzsyckz5f7d6nq0nn5z76vhuuyaj/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>bc1qfm4lhg6frkmzsyckz5f7d6nq0nn5z76vhuuyaj</code>
+
+        <div>🪙 <strong>ETH (ERC20)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=60&address=0x71C2238E1DEc7244ceD686E14771e1bd089d192A/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>0x71C2238E1DEc7244ceD686E14771e1bd089d192A</code>
+
+        <div>🪙 <strong>USDT (TRC20)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=195&address=TVMH9N4JUaKbdFLTVpoFfQEhXMpKghh3Wj&token_id=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>TVMH9N4JUaKbdFLTVpoFfQEhXMpKghh3Wj</code>
+
+        <div>🪙 <strong>BNB (BEP20)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=20000714&address=0x71C2238E1DEc7244ceD686E14771e1bd089d192A/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>0x71C2238E1DEc7244ceD686E14771e1bd089d192A</code>
+
+        <div>🪙 <strong>SOL (Solana)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=501&address=42f6rL81hBLFbTvTrAj2QMKF6XRL7Y5P7NMGLeHWB276/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>42f6rL81hBLFbTvTrAj2QMKF6XRL7Y5P7NMGLeHWB276</code>
+
+        <div>🪙 <strong>XRP (XRP Ledger)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=144&address=rPNnvPQikAJKnbGwkMFP4kBThgmXjvi4KM /" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>rPNnvPQikAJKnbGwkMFP4kBThgmXjvi4KM</code>
+
+        <div>🪙 <strong>LTC (Litecoin)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=2&address=ltc1qyma2ftm49zahzp0qe4xc5s6x79k7keqhwm0qtd/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>ltc1qyma2ftm49zahzp0qe4xc5s6x79k7keqhwm0qtd</code>
+
+        <div>🪙 <strong>XLM (Stellar)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=148&address=GCM2ZAFIYEF54FEVAYXRX3TRJRPK626UGKCBW2UZZ4DZ26EJAGLGORSU/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>GCM2ZAFIYEF54FEVAYXRX3TRJRPK626UGKCBW2UZZ4DZ26EJAGLGORSU</code>
+
+        <div>🪙 <strong>Polygon (MATIC)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=966&address=0x71C2238E1DEc7244ceD686E14771e1bd089d192A /" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>0x71C2238E1DEc7244ceD686E14771e1bd089d192A</code>
+
+        <div>🪙 <strong>TRX (TRON - TRC20)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=195&address=TVMH9N4JUaKbdFLTVpoFfQEhXMpKghh3Wj/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>TVMH9N4JUaKbdFLTVpoFfQEhXMpKghh3Wj</code>
+
+        <div>🪙 <strong>USDT (BEP20)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=20000714&address=0x71C2238E1DEc7244ceD686E14771e1bd089d192A&token_id=0x55d398326f99059fF775485246999027B3197955/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>0x71C2238E1DEc7244ceD686E14771e1bd089d192A</code>
+
+        <div>🪙 <strong>USDC (SOL)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=501&address=42f6rL81hBLFbTvTrAj2QMKF6XRL7Y5P7NMGLeHWB276&token_id=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>42f6rL81hBLFbTvTrAj2QMKF6XRL7Y5P7NMGLeHWB276 </code>
+
+        <div>🪙 <strong>USDT (ETH)</strong><br>
+            <a href="https://link.trustwallet.com/send?coin=60&address=0x71C2238E1DEc7244ceD686E14771e1bd089d192A&token_id=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/" target="_blank">Pay via Trust Wallet</a>
+        </div>
+        <code>0x71C2238E1DEc7244ceD686E14771e1bd089d192A</code>
+    </div>
+</div>
+
+
+        <p style="margin-top: 40px;">
+            Thank you for sowing into eternal things.  
+            <br><strong>All glory to Jesus Christ.</strong>
+        </p>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://365biblechapter.com/cookie-policy.html">Privacy Policy</a> |
+            <a href="https://365biblechapter.com/terms-and-conditions.html">Terms & Conditions</a> |
+            <a href="https://365biblechapter.com/cookie-policy.html">Cookie Policy</a>
+        </div>
+        <p class="copyright">© 2025 - 365 Bible Chapter. All Rights Reserved.</p>
+    </footer>
+    
+
+    <script>
+        function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    if (menu.style.right === "0px") {
+        menu.style.right = "-100%"; 
+        document.removeEventListener("click", closeMenuOnOutsideClick);
+    } else {
+        menu.style.right = "0px";
+        setTimeout(() => {
+            document.addEventListener("click", closeMenuOnOutsideClick);
+        }, 10);
+    }
+        }
+        function closeMenuOnOutsideClick(event) {
+    var menu = document.getElementById("mobileMenu");
+    var toggleButton = document.querySelector(".menu-toggle");
+
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+        menu.style.right = "-100%"; 
+        document.removeEventListener("click", closeMenuOnOutsideClick);
+    }
+}
+
+    </script>
+
+<a href="https://opensea.io/collection/the-living-word-2025" class="opensea-float" target="_blank" aria-label="OpenSea">
+    <img src="opensea.webp" alt="OpenSea">
+</a>
+
+
+</body>
+</html>
