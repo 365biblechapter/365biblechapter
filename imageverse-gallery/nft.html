@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Living Word NFT – A Living Scroll of the Word</title>
+<meta name="description" content="Explore a unique Bible verse visual from the 365 Bible Chapter collection. Each NFT is a living seed of Scripture." />
+<meta name="keywords" content="Bible NFT, Scripture Art, 365 Bible Chapter, Verse Visual, Word of God NFT, Christian Digital Art" />
+
+<meta property="og:title" content="ImageVerse NFT – A Living Scroll of the Word">
+<meta property="og:description" content="Every image carries a verse. Every verse carries power. View the full verse-based digital collectible now.">
+<meta property="og:image" content="https://365biblechapter.com/open-graph.png"> 
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://365biblechapter.com/nft.html">
+
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+   
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html, body {
+            
+            overflow-x: hidden;
+            width: 100%;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: rgb(255, 255, 255);
+        }
+
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: rgba(0, 0, 0, 0.3); 
+            background-blend-mode: darken; 
+            z-index: 1000;
+        }
+                .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('web-header.webp') center/cover no-repeat;
+            opacity: 0.7; 
+            z-index: -1; 
+        }
+
+        .logo {
+            position: absolute;
+            left: 5%;
+            width: 60px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu li {
+            display: inline;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #ffffff;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #000000;
+            position: fixed; 
+            top: 20px; 
+            right: 5%;
+            z-index: 1100;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100vh;
+            background: #87cefaf2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            transition: right 0.3s ease-in-out;
+            z-index: 1050;
+        }
+
+        .mobile-menu a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 15px 0;
+            font-size: 18px;
+        }
+
+        .mobile-menu a:hover {
+            color: #87cefa;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+        .social-icons {
+            position: absolute;
+            right: 50px; 
+            top: 48%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 5px;
+        }
+
+        .social-icons a img {
+            width: 24px; 
+            height: 24px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.2);
+        }
+        
+        @media (max-width: 480px) {
+            .social-icons {
+                right: 45px; 
+                bottom: 17%;
+            }
+        }
+
+        
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .social-icons {
+                right: 80px; 
+                bottom: 17%;
+            }
+        }
+        
+
+        .social-icons a img {
+            width: 35px;
+            height: 35px;
+        }
+
+.footer {
+    background: #87cefa; 
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff; 
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+        .opensea-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        z-index: 1000;
+    }
+
+    .opensea-float img {
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .opensea-float img:hover {
+        transform: scale(1.1);
+    }
+@media (max-width: 768px) {
+  #nft-image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.nft-desc {
+  display: inline-block;
+  background: #e8f4ff;
+  color: #000;
+  padding: 6px 12px;
+  margin: 5px;
+  font-size: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+/* 🎨 Rarity Tag Styles */
+.rarity-Light {
+  background-color: #1fa4f7;
+  color: white;
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+.rarity-Fire {
+  background-color: #e63946;
+  color: white;
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+.rarity-Glory {
+  background-color: #f4c430;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+.trait-item {
+  animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.highlight-red {
+  color: red;
+  font-weight: bold;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="https://365biblechapter.github.io/"></a>
+        <img src="365biblechapter.webp" alt="365biblechapter Logo" class="logo">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="https://365biblechapter.com/#about">About</a></li>
+                <li><a href="https://365biblechapter.com/#Bible">Bible</a></li>
+                <li><a href="https://365biblechapter.com/imageverse-gallery/nft-gallery.html">NFT Art</a></li>
+                <li><a href="https://365biblechapter.com/#prayer">Prayer</a></li>
+                <li><a href="https://365biblechapter.com/#contact">Contact</a></li>
+                <li><a href="https://365biblechapter.com/saved.html" target="_blank">Are you Saved?</a></li>
+                <li><a href="https://365biblechapter.com/support.html" target="_blank">Support</a></li>
+            </ul>
+        </nav>
+         
+    <div class="social-icons">
+        <a href="https://www.youtube.com/@365biblechapter" target="_blank"><img src="YT.webp" alt="YouTube"></a>
+        <a href="https://x.com/365BibleChapter?t=QPxriRsh0enOAm5W6tlXoA&s=09" target="_blank"><img src="X.webp" alt="X.com"></a>
+        <a href="https://opensea.io/collection/the-living-word-2025" target="_blank"><img src="Opensea.webp" alt="Opensea.com"></a>
+    </div>
+
+</div>
+    </header>
+
+    <div id="mobileMenu" class="mobile-menu">
+        <a href="https://365biblechapter.com/#about" onclick="toggleMenu()">About Us</a>
+        <a href="https://365biblechapter.com/#Bible" onclick="toggleMenu()">Bible</a>
+        <a href="https://365biblechapter.com/imageverse-gallery/nft-gallery.html" onclick="toggleMenu()">NFT Art</a>
+        <a href="https://365biblechapter.com/#prayer" onclick="toggleMenu()">Prayer</a>
+        <a href="https://365biblechapter.com/#contact" onclick="toggleMenu()">Contact</a>
+         <a href="https://365biblechapter.com/saved.html" target="_blank" onclick="toggleMenu()">Are you Saved?</a>
+        <a href="https://365biblechapter.com/support.html" target="_blank" onclick="toggleMenu()">Support</a>
+    </div>
+
+
+
+    
+ <section id="nft-display" style="padding: 100px 20px; text-align: center; background: #f0f8ff; color: #000;">
+  <h1 id="nft-title" style="font-size: 42px; font-weight: bold;"></h1>
+  <p id="nft-verse" style="font-size: 18px; margin-top: 10px; font-style: italic;"></p>
+  
+  <div style="margin: 30px 0;">
+    <img id="nft-image" src="" alt="Verse NFT" style="max-width: 90%; max-height: 500px; border-radius: 10px;">
+  </div>
+<div id="nft-traits" style="margin: 30px auto; max-width: 600px; text-align: center;">
+  <h3 style="margin-bottom: 15px; color: #333; letter-spacing: 1px; text-transform: uppercase;">Traits</h3>
+</div>
+  <div style="font-size: 16px; margin-bottom: 30px;">
+    <p><strong>Owner:</strong> <span id="nft-owner"></span></p>
+    <p>
+      <a id="nft-youtube" href="#" target="_blank">▶️ YouTube</a> |
+      <a id="nft-tiktok" href="#" target="_blank">🎵 TikTok</a> |
+      <a id="nft-opensea" href="#" target="_blank">🌊 View on OpenSea</a>
+    </p>
+  </div>
+
+  <button onclick="copyShareLink()" style="padding: 10px 20px; font-weight: bold; background: #1fa4f7; border: none; border-radius: 8px; cursor: pointer;">
+    🔗 Copy Share Link
+  </button>
+
+</section>
+    
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://365biblechapter.com/cookie-policy.html">Privacy Policy</a> |
+            <a href="https://365biblechapter.com/terms-and-conditions.html">Terms & Conditions</a> |
+            <a href="https://365biblechapter.com/cookie-policy.html">Cookie Policy</a>
+        </div>
+        <p class="copyright">© 2025 - 365 Bible Chapter. All Rights Reserved.</p>
+    </footer>
+    
+
+    <script>
+        function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    if (menu.style.right === "0px") {
+        menu.style.right = "-100%"; 
+        document.removeEventListener("click", closeMenuOnOutsideClick);
+    } else {
+        menu.style.right = "0px";
+        setTimeout(() => {
+            document.addEventListener("click", closeMenuOnOutsideClick);
+        }, 10);
+    }
+        }
+        function closeMenuOnOutsideClick(event) {
+    var menu = document.getElementById("mobileMenu");
+    var toggleButton = document.querySelector(".menu-toggle");
+
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+        menu.style.right = "-100%"; 
+        document.removeEventListener("click", closeMenuOnOutsideClick);
+    }
+}
+
+document.addEventListener("contextmenu", function (event) {
+        if (event.target.tagName === "IMG") {
+            event.preventDefault();
+        }
+    });
+
+
+    document.addEventListener("dragstart", function (event) {
+        if (event.target.tagName === "IMG") {
+            event.preventDefault();
+        }
+    });
+
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "PrintScreen") {
+            event.preventDefault();
+        }
+    });
+
+
+    document.addEventListener("keyup", function (event) {
+        if (event.key === "PrintScreen") {
+            navigator.clipboard.writeText(""); 
+        }
+    });
+
+
+    document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey && (event.key === "u" || event.key === "U" || 
+            event.key === "i" || event.key === "I" || event.key === "j" || event.key === "J" || 
+            event.key === "c" || event.key === "C" || event.key === "s" || event.key === "S")) {
+            event.preventDefault();
+            alert("Developer tools are disabled on this site.");
+        }
+        if (event.key === "F12") {
+            event.preventDefault();
+            alert("Developer tools are disabled.");
+        }
+    });
+    </script>
+    <script>
+        function openModal(imageSrc) {
+    document.getElementById("zoomModal").style.display = "flex";
+    document.getElementById("modalImg").src = imageSrc;
+  }
+
+  function closeModal(event) {
+    if (event) event.stopPropagation();
+    document.getElementById("zoomModal").style.display = "none";
+  }
+  
+      </script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+fetch('data.json')
+  .then(res => res.json())
+  .then(data => {
+    if (id && data[id]) {
+      const nft = data[id];
+      document.getElementById("nft-title").textContent = nft.title || 'Untitled';
+      document.getElementById("nft-verse").innerHTML = nft.verse || '';
+      document.getElementById("nft-image").src = nft.image || '';
+
+
+      document.getElementById("nft-image").alt = nft.title || 'NFT Image';
+      document.getElementById("nft-image").onerror = () => {
+        document.getElementById("nft-image").src = 'images/default-image.jpg';
+      };
+
+      document.getElementById("nft-owner").textContent = nft.owner || 'Unclaimed';
+      document.getElementById("nft-youtube").href = nft.youtube || "#";
+      document.getElementById("nft-tiktok").href = nft.tiktok || "#";
+      document.getElementById("nft-opensea").href = nft.opensea || "#";
+      document.title = nft.title + " – The Living Word NFT";
+
+
+      const ogImage = document.querySelector("meta[property='og:image']");
+      if (ogImage && nft.image) {
+        ogImage.setAttribute("content", nft.image);
+      }
+
+
+const traitsContainer = document.getElementById("nft-traits");
+traitsContainer.innerHTML = "";
+
+if (nft.traits) {
+  for (const [trait, value] of Object.entries(nft.traits)) {
+  const traitLine = document.createElement("p");
+
+  if (trait === "Rarity") {
+    traitLine.innerHTML = `<strong>${trait}:</strong> <span class="rarity-${value}">${value}</span>`;
+  } else {
+    traitLine.innerHTML = `<strong>${trait}:</strong> ${value}`;
+  }
+
+  traitLine.style.marginBottom = "8px";
+  traitLine.style.fontSize = "16px";
+
+
+  traitLine.classList.add("nft-desc", "trait-item");
+
+  traitsContainer.appendChild(traitLine);
+}
+} else {
+  document.getElementById("nft-display").innerHTML = "<h2>❌ NFT not found.</h2>";
+}
+}
+  });
+
+function copyShareLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    alert("Share link copied!");
+  });
+}
+</script>
+
+<a href="https://opensea.io/collection/the-living-word-2025" class="opensea-float" target="_blank" aria-label="OpenSea">
+    <img src="opensea.webp" alt="OpenSea">
+</a>
+
+
+
+</body>
+</html>
