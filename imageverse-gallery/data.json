@@ -6,7 +6,16 @@
   "youtube": "",
   "tiktok": "",
   "opensea": "",
-  "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
   "traits": {
     "Rarity": "Light",
     "Focus": "Mountain Silhouette",
@@ -15,22 +24,31 @@
     "Symbolism": "Watchfulness, Majesty"
     }
   },
-    "imageverse002": {
-    "title": "Provision in Every Blade",
-    "verse": "<span class='highlight-red'>Wherefore, if God so clothe the grass of the field, which to day is, and to morrow is cast into the oven, shall he not much more clothe you, O ye of little faith?</span> - Matthew 6:30 KJV",
-    "image": "images/imageverse002.webp",
-    "youtube": "",
-    "tiktok": "",
-    "opensea": "",
-    "owner": "Unclaimed",
-    "traits": {
-      "Rarity": "Light",
-      "Focus": "Hand in Wheatgrass",
-      "Book": "Matthew",
-      "Verse Theme": "God Provides",
-      "Symbolism": "Trust, Simplicity"
-    }
-  },
+ "imageverse002": {
+  "title": "Provision in Every Blade",
+  "verse": "<span class='highlight-red'>Wherefore, if God so clothe the grass of the field... shall he not much more clothe you, O ye of little faith?</span> - Matthew 6:30 KJV",
+  "image": "images/imageverse002.webp",
+  "youtube": "",
+  "tiktok": "",
+  "opensea": "https://opensea.io/assets/matic/your_contract/imageverse002",
+  "total_editions": 7,
+  "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
+  "traits": {
+    "Rarity": "Light",
+    "Focus": "Hand in Wheatgrass",
+    "Book": "Matthew",
+    "Verse Theme": "God Provides",
+    "Symbolism": "Trust, Simplicity"
+  }
+},
     "imageverse003": {
     "title": "Plagues and Promises",
     "verse": "And if thou refuse to let them go, behold, I will smite all thy borders with frogs: - Exodus 8:2 KJV",
@@ -38,7 +56,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+    "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Frog",
@@ -54,7 +77,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+    "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Mossy Stone",
@@ -70,7 +102,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+    "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Lizard",
@@ -86,7 +127,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Mushroom",
@@ -102,7 +152,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Clay Pot",
@@ -118,7 +173,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Sprout on Cut Stump",
@@ -134,7 +194,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Olive",
@@ -150,7 +219,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Millet",
@@ -166,7 +244,10 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 1,
+    "owners": [
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Glory",
       "Focus": "Radiant Sunbeams",
@@ -182,7 +263,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Two Eggs in Cracked Bowl",
@@ -198,7 +284,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Brass Cup",
@@ -214,7 +305,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Lightning in Water",
@@ -230,7 +326,10 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 1,
+    "owners": [
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Glory",
       "Focus": "Wind Patterned Dunes",
@@ -246,7 +345,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Feather Between Rocks",
@@ -262,7 +366,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Sunrise Horizon",
@@ -278,7 +391,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Lichen Clusters",
@@ -294,7 +416,10 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 1,
+    "owners": [
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Glory",
       "Focus": "Light from Clouds",
@@ -310,7 +435,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Sprout in Cracked Earth",
@@ -326,7 +456,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Green Reed",
@@ -342,7 +481,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Almond Blossom Petal",
@@ -358,7 +506,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Swirling Dust",
@@ -374,7 +531,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Hands in Water",
@@ -390,7 +552,10 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 1,
+    "owners": [
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Glory",
       "Focus": "Wooden Cross",
@@ -406,7 +571,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Partially Submerged Branch",
@@ -422,7 +596,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Angular Stone",
@@ -438,7 +621,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Stream in Canyon",
@@ -454,7 +646,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Dried Curled Leaf",
@@ -470,7 +667,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Nest in Tree Branch",
@@ -486,7 +688,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Snapped Twig",
@@ -502,7 +709,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Crown of Reeds",
@@ -518,7 +730,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Elegant Rose",
@@ -534,7 +755,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Snow Stream",
@@ -550,7 +780,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Almond Blossom",
@@ -566,7 +805,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Woven Rope",
@@ -582,7 +826,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Vine on Wall",
@@ -598,7 +851,10 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 1,
+    "owners": [
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Glory",
       "Focus": "Door with Light Gap",
@@ -614,7 +870,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Spiral Shell",
@@ -630,7 +895,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Mossy Root in Water",
@@ -646,7 +920,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Wool on Thorn Branch",
@@ -662,7 +945,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Cracked Jar",
@@ -678,7 +966,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Chain & Well",
@@ -694,7 +987,10 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 1,
+    "owners": [
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Glory",
       "Focus": "Jellyfish",
@@ -710,7 +1006,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Fish Eggs on Leaf",
@@ -726,7 +1031,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Clay Jar",
@@ -742,7 +1052,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Snowy Pinecone",
@@ -758,7 +1077,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Turtle Shell",
@@ -774,7 +1102,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Dried Leaves, Single Green",
@@ -790,7 +1127,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Reaching Vine Tendril",
@@ -806,7 +1152,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Lone Cactus",
@@ -822,7 +1177,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Blossom on Rock",
@@ -838,7 +1202,10 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 1,
+    "owners": [
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Glory",
       "Focus": "Light-filled Canyon",
@@ -854,7 +1221,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Cotton Boll",
@@ -870,7 +1246,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Burning Clay Lamp",
@@ -886,7 +1267,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Broken Ceramic",
@@ -902,7 +1288,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Large Rock",
@@ -918,7 +1313,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Water Droplet",
@@ -934,7 +1338,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Shattered Shell",
@@ -950,7 +1363,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Desert Bloom",
@@ -966,7 +1384,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Broken Eggshell",
@@ -982,7 +1409,12 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 3,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Fire",
       "Focus": "Broken Pottery",
@@ -998,7 +1430,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Open Pomegranate",
@@ -1014,7 +1455,16 @@
     "youtube": "",
     "tiktok": "",
     "opensea": "",
-    "owner": "Unclaimed",
+  "total_editions": 7,
+    "owners": [
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed",
+    "Unclaimed"
+  ],
     "traits": {
       "Rarity": "Light",
       "Focus": "Lit Candle",
