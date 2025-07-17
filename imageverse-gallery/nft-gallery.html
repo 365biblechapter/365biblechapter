@@ -472,7 +472,7 @@ document.addEventListener("contextmenu", function (event) {
     const filterRarity = document.getElementById("filter-rarity");
     const filterBook = document.getElementById("filter-book");
 
-    fetch("data.json")
+    fetch("https://pub-444376bf457545bf9740ea27162c293f.r2.dev/data.json")
       .then(res => res.json())
       .then(json => {
         data = json;
