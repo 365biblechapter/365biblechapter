@@ -690,11 +690,8 @@ function closeModal(event) {
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-fetch("https://365biblechapter.com/data.json?v=1", {
-  headers: {
-    "Authorization": "Bearer your-strong-secret-token-here"
-  }
-})
+fetch("https://365biblechapter.com/data.json?v=1")
+   
   .then(res => res.json())
   .then(data => {
 
