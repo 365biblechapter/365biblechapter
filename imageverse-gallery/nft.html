@@ -690,7 +690,7 @@ function closeModal(event) {
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-fetch('data.json')
+fetch('https://pub-444376bf457545bf9740ea27162c293f.r2.dev/data.json')
   .then(res => res.json())
   .then(data => {
 
