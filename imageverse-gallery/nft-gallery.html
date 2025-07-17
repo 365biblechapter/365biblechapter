@@ -472,7 +472,7 @@ document.addEventListener("contextmenu", function (event) {
     const filterRarity = document.getElementById("filter-rarity");
     const filterBook = document.getElementById("filter-book");
 
-    fetch("https://365biblechapter.com/data.json?v=" + Date.now())
+    fetch("https://365biblechapter.com/data.json?v=123456")
       .then(res => res.json())
       .then(json => {
         data = json;
