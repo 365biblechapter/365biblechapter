@@ -690,7 +690,7 @@ function closeModal(event) {
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-fetch('https://365biblechapter.com/data.json')
+fetch("https://365biblechapter.com/data.json?v=" + Date.now())
   .then(res => res.json())
   .then(data => {
 
