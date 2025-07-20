@@ -454,6 +454,8 @@
   font-size: 11px;
   line-height: 1.3;
   white-space: normal;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .tooltip-container:hover .tooltip-text {
@@ -468,7 +470,93 @@
   }
 }
 
+.nft-action-box {
+  max-width: 360px;
+  margin: 24px auto;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.nft-button-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.action-btn {
+  background-color: #ffffff;
+  color: #fff;
+  font-weight: bold;
+  width: 90px;
+  height: 44px;
+  border: none;
+  border-radius: 10px; /* Rounded square */
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #87cefa;
+}
+
+.nft-social-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.nft-social-row a img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.nft-social-row a:hover img {
+  transform: scale(1.1);
+}
+
+.nft-button-box {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.nft-count-button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(237, 237, 237);
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.nft-count-button:hover {
+  background-color: #87cefa;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (hover: none) {
+  .tooltip-text {
+    display: none !important;
+  }
+}
+
     </style>
+    
 </head>
 <body>
 
@@ -522,12 +610,44 @@
 >
 </div>
 
-    <div style="margin-top: 10px;">
-      <a id="nft-opensea" href="#" target="_blank" style="font-size: 16px; color: #1e40af; font-weight: regular;">
-        View on OpenSea
-      </a>
-    </div>
+<!-- 📦 Action Box -->
+<div class="nft-action-box">
+
+  <!-- 🔘 Row 1: Love, Wishlist, Share Count -->
+<div class="nft-button-box">
+<div class="tooltip-container">
+  <button class="nft-count-button" onclick="loveThisNFT()">❤️ <span id="love-count">0</span></button>
+  <span class="tooltip-text">Love</span>
+</div>
+<div class="tooltip-container">
+  <button class="nft-count-button" onclick="wishlistThisNFT()">👀 <span id="wishlist-count">0</span></button>
+  <span class="tooltip-text">Wishlist</span>
+</div>
+<div class="tooltip-container">
+  <button class="nft-count-button" onclick="copyNFTLink()">🔁 <span id="share-count">0</span></button>
+  <span class="tooltip-text">Share</span>
+</div>
+</div>
+
+
+
+<!-- 🔗 Row 2: Social Links -->
+<div class="nft-social-row">
+  <a id="nft-opensea" href="#" target="_blank"><img src="opensea.webp" alt="OpenSea"></a>
+  <a id="nft-youtube" href="#" target="_blank"><img src="YT.webp" alt="YouTube"></a>
+  <a id="nft-tiktok" href="#" target="_blank"><img src="tiktok.webp" alt="TikTok"></a>
+  <a id="nft-x" href="#" target="_blank"><img src="x.webp" alt="X"></a>
+  <a id="nft-reddit" href="#" target="_blank"><img src="reddit.webp" alt="Reddit"></a>
+  <a id="nft-pinterest" href="#" target="_blank"><img src="pinterest.webp" alt="Pinterest"></a>
+  <a id="nft-instagram" href="#" target="_blank"><img src="instagram.webp" alt="Instagram"></a>
+</div>
+
+
+</div>
+
+
   </div>
+
 
 
   <div id="nft-traits" style="margin: 30px auto 40px; max-width: 600px; text-align: center;">
@@ -536,16 +656,9 @@
   </div>
 
 
-  <div style="font-size: 16px; margin-bottom: 30px;">
-    <p>
-      <a id="nft-youtube" href="#" target="_blank">▶️ YouTube</a> |
-      <a id="nft-tiktok" href="#" target="_blank">🎵 TikTok</a>
-    </p>
-  </div>
-
 <div style="position: relative; display: inline-block; margin-top: 20px;">
-  <button onclick="toggleShareBox()" id="shareButton" style="padding: 10px 20px; font-weight: bold; background: #1fa4f7; color: #fff; border: none; border-radius: 8px; cursor: pointer;">
-    🔗 Share This NFT
+  <button onclick="toggleShareBox()" id="shareButton" style="padding: 10px 20px; font-weight: bold; background: #87cefa; color: #000000; border: none; border-radius: 8px; cursor: pointer;">
+    🔗 Share Link
   </button>
 
   <div id="shareBox" class="share-box">
@@ -553,8 +666,8 @@
     <input type="text" id="shareLink" readonly style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 6px; margin-bottom: 10px; font-size: 13px;">
 
     <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center;">
-  <button onclick="copyNFTLink()" style="flex: 1 1 45%; padding: 6px; font-size: 14px; border-radius: 6px; background: #1fa4f7; color: #fff; border: none;">
-    📋 Copy
+  <button onclick="copyNFTLink()" style="flex: 1 1 45%; padding: 6px; font-size: 14px; border-radius: 6px; background: #87cefa; color: #ffffff; border: none;">
+    🔗 Copy Link
   </button>
 
   <a id="shareX" target="_blank" class="share-btn" style="background:#000; flex: 1 1 45%;">
@@ -565,7 +678,7 @@
     <img src="whatsapp.webp" alt="WhatsApp" style="width: 18px; margin-right: 6px; vertical-align: middle;"> WhatsApp
   </a>
 
-  <a id="shareEmail" target="_blank" class="share-btn" style="background:#ea4335; flex: 1 1 45%;">
+  <a id="shareEmail" target="_blank" class="share-btn" style="background:rgb(237, 81, 67); flex: 1 1 45%;">
     <img src="gmail.webp" alt="Email" style="width: 18px; margin-right: 6px; vertical-align: middle;"> Email
   </a>
 
@@ -586,8 +699,10 @@
   <span class="tooltip-container">
     <span class="tooltip-icon">❓</span>
     <span class="tooltip-text">
-      Ownership updates may take up to 24 hours.
-    </span>
+  Ownership updates<br>
+  may take up to<br>
+  24 hours.
+</span>
   </span>
   Edition Ownership
 </h3>
@@ -658,18 +773,7 @@ document.addEventListener("contextmenu", function (event) {
     });
 
 
-    document.addEventListener("keydown", function (event) {
-        if (event.ctrlKey && (event.key === "u" || event.key === "U" || 
-            event.key === "i" || event.key === "I" || event.key === "j" || event.key === "J" || 
-            event.key === "c" || event.key === "C" || event.key === "s" || event.key === "S")) {
-            event.preventDefault();
-            alert("Developer tools are disabled on this site.");
-        }
-        if (event.key === "F12") {
-            event.preventDefault();
-            alert("Developer tools are disabled.");
-        }
-    });
+
     </script>
     <script>
         function openModal(imageSrc) {
@@ -684,142 +788,223 @@ function closeModal(event) {
   document.getElementById("zoomModal").style.display = "none";
 }
   
-      </script>
+</script>
 
-<script>
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import {
+    getFirestore,
+    doc,
+    getDoc,
+    updateDoc,
+    increment
+  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-fetch("https://365biblechapter.com/data.json?v=1")
-   
-  .then(res => res.json())
-  .then(data => {
+  // ✅ Replace this with your actual Firebase config:
+  const firebaseConfig = {
+  apiKey: "AIzaSyA3L0pXvYRWdC1GCJTD3y1gnqBYpysC41s",
+  authDomain: "nft-counter.firebaseapp.com",
+  projectId: "nft-counter",
+  storageBucket: "nft-counter.appspot.com",
+  messagingSenderId: "325749003978",
+  appId: "1:325749003978:web:45d0622536a55525ff4633",
+  measurementId: "G-Y59S65LLWB"
+};
 
-    if (!id || !data[id]) {
-      document.getElementById("nft-display").innerHTML = `
-        <div style="padding: 80px 20px; text-align: center;">
-          <h2 style="font-size: 26px; color: #d32f2f;">❌ NFT Not Found</h2>
-          <p style="margin-top: 12px; color: #555;">The scroll for this verse has not yet opened.</p>
-          <a href="imageverse-gallery/nft-gallery.html" style="
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #1fa4f7;
-            color: white;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.3s;
-          ">🔙 Back to Gallery</a>
-        </div>
-      `;
-      return; 
-    }
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
 
-    const nft = data[id];
+  // ✅ Fetch and check NFT data
+  fetch("https://365biblechapter.com/data.json")
+    .then(res => res.json())
+    .then(async data => {
+      if (!id || !data[id]) {
+        document.getElementById("nft-display").innerHTML = `
+          <div style="padding: 80px 20px; text-align: center;">
+            <h2 style="font-size: 26px; color: #d32f2f;">Opps... NFT Not Found</h2>
+            <p style="margin-top: 12px; color: #555;">The scroll for this verse has not yet opened.</p>
+            <a href="https://365biblechapter.com/imageverse-gallery/nft-gallery.html" style="
+              display: inline-block;
+              margin-top: 20px;
+              padding: 10px 20px;
+              background: #1fa4f7;
+              color: white;
+              font-weight: bold;
+              text-decoration: none;
+              border-radius: 8px;
+              transition: background 0.3s;">To NFT Collection</a>
+          </div>
+        `;
+        return;
+      }
+
+      const nft = data[id];
+
+      // ✅ Update HTML with NFT data
       document.getElementById("nft-title").textContent = nft.title || 'Untitled';
       document.getElementById("nft-verse").innerHTML = nft.verse || '';
       document.getElementById("nft-image").src = nft.image || '';
-
-
       document.getElementById("nft-image").alt = nft.title || 'NFT Image';
       document.getElementById("nft-image").onerror = () => {
         document.getElementById("nft-image").src = 'images/default-image.jpg';
       };
 
-const ownerBlock = document.getElementById("nft-owner");
+      // ✅ Ownership Editions
+      const ownerBlock = document.getElementById("nft-owner");
+      if (Array.isArray(nft.owners)) {
+        const editionCount = nft.owners.length;
+        ownerBlock.insertAdjacentHTML("beforebegin",
+          `<p><strong>Total Editions:</strong> ${editionCount}</p>`);
+        ownerBlock.innerHTML = nft.owners.map((o, i) => {
+          const isUnclaimed = (typeof o === 'string' && o.toLowerCase() === "unclaimed");
+          const badgeClass = isUnclaimed ? "unclaimed" : "claimed";
+          return `
+            <div style="margin: 4px 0;">
+              Edition ${i + 1}: 
+              <span class="badge ${badgeClass}">${isUnclaimed ? "Unclaimed" : o}</span>
+            </div>`;
+        }).join("");
+      } else {
+        const singleOwner = nft.owners || nft.owner || 'Unclaimed';
+        const isUnclaimed = (typeof singleOwner === 'string' && singleOwner.toLowerCase() === "unclaimed");
+        ownerBlock.innerHTML = `
+          <div>
+            Edition 1: 
+            <span class="badge ${isUnclaimed ? "unclaimed" : "claimed"}">
+              ${isUnclaimed ? "Unclaimed" : singleOwner}
+            </span>
+          </div>`;
+      }
 
+      // ✅ Traits + Rarity + Supply
+      const traitsContainer = document.getElementById("nft-traits");
+      traitsContainer.innerHTML = "";
+      if (nft.traits) {
+        for (const [trait, value] of Object.entries(nft.traits)) {
+          const traitLine = document.createElement("p");
+          traitLine.style.marginBottom = "8px";
+          traitLine.style.fontSize = "16px";
+          traitLine.classList.add("nft-desc", "trait-item");
 
-if (Array.isArray(nft.owners)) {
-  const editionCount = nft.owners.length;
+          if (trait === "Rarity") {
+            traitLine.innerHTML = `<strong>${trait}:</strong> <span class="rarity-${value}">${value}</span>`;
+            traitsContainer.appendChild(traitLine);
 
+            const totalSupply = nft.total_editions || (Array.isArray(nft.owners) ? nft.owners.length : 1);
+            const supplyLine = document.createElement("p");
+            supplyLine.innerHTML = `<strong>Total Supply:</strong> ${totalSupply}`;
+            supplyLine.classList.add("nft-desc", "trait-item");
+            supplyLine.style.marginBottom = "8px";
+            supplyLine.style.fontSize = "16px";
+            traitsContainer.appendChild(supplyLine);
+            continue;
+          }
 
-  ownerBlock.insertAdjacentHTML("beforebegin",
-    `<p><strong>Total Editions:</strong> ${editionCount}</p>`);
+          traitLine.innerHTML = `<strong>${trait}:</strong> ${value}`;
+          traitsContainer.appendChild(traitLine);
+        }
+      }
 
+      // ✅ Platform Links
+      renderPlatformLinks(nft);
 
-  ownerBlock.innerHTML = nft.owners.map((o, i) => {
-    const isUnclaimed = (typeof o === 'string' && o.toLowerCase() === "unclaimed");
-    const badgeClass = isUnclaimed ? "unclaimed" : "claimed";
-    return `
-      <div style="margin: 4px 0;">
-        Edition ${i + 1}: 
-        <span class="badge ${badgeClass}">${isUnclaimed ? "Unclaimed" : o}</span>
-      </div>
-    `;
-  }).join("");
-
-
-} else {
-  const singleOwner = nft.owners || nft.owner || 'Unclaimed';
-  const isUnclaimed = (typeof singleOwner === 'string' && singleOwner.toLowerCase() === "unclaimed");
-  ownerBlock.innerHTML = `
-    <div>
-      Edition 1: 
-      <span class="badge ${isUnclaimed ? "unclaimed" : "claimed"}">
-        ${isUnclaimed ? "Unclaimed" : singleOwner}
-      </span>
-    </div>`;
-}
-
-
-      document.getElementById("nft-youtube").href = nft.youtube || "#";
-      document.getElementById("nft-tiktok").href = nft.tiktok || "#";
-      document.getElementById("nft-opensea").href = nft.opensea || "#";
-      document.title = nft.title + " – The Living Word NFT";
-
-
+      // ✅ Dynamic SEO Image
       const ogImage = document.querySelector("meta[property='og:image']");
       if (ogImage && nft.image) {
         ogImage.setAttribute("content", nft.image);
       }
 
+      // ✅ Load Firebase Counts
+      const ref = doc(db, "imageverses", id);
+      const snap = await getDoc(ref);
+      if (snap.exists()) {
+        const counts = snap.data();
+        document.getElementById("love-count").textContent = counts.loveCount ?? 0;
+        document.getElementById("wishlist-count").textContent = counts.wishCount ?? 0;
+        document.getElementById("share-count").textContent = counts.shareCount ?? 0;
+      }
+    });
 
-const traitsContainer = document.getElementById("nft-traits");
-traitsContainer.innerHTML = "";
-
-if (nft.traits) {
-  for (const [trait, value] of Object.entries(nft.traits)) {
-  const traitLine = document.createElement("p");
-
-if (trait === "Rarity") {
-  traitLine.innerHTML = `<strong>${trait}:</strong> <span class="rarity-${value}">${value}</span>`;
-  traitLine.classList.add("nft-desc", "trait-item");
-  traitsContainer.appendChild(traitLine);
-
-
-  const totalSupply = nft.total_editions || (Array.isArray(nft.owners) ? nft.owners.length : 1);
-  const supplyLine = document.createElement("p");
-  supplyLine.innerHTML = `<strong>Total Supply:</strong> ${totalSupply}`;
-  supplyLine.classList.add("nft-desc", "trait-item");
-  traitsContainer.appendChild(supplyLine);
-
-  continue; 
-} else {
-  traitLine.innerHTML = `<strong>${trait}:</strong> ${value}`;
+  // ✅ Action Handlers (Buttons)
+  async function updateCount(type) {
+  if (!id) return;
+  try {
+    console.log(`[ACTION] Updating "${type}" for ID:`, id);
+    const ref = doc(db, "imageverses", id);
+    await updateDoc(ref, { [type]: increment(1) });
+    await loadCounts();
+    console.log(`[✅] Updated "${type}" successfully`);
+  } catch (e) {
+    console.error(`[❌] Failed to update "${type}":`, e);
+  }
 }
 
+  window.copyNFTLink = () => {
+  const input = document.getElementById("shareLink");
 
-  traitLine.style.marginBottom = "8px";
-  traitLine.style.fontSize = "16px";
+  if (!input) {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      updateCount("shareCount");
+    });
+    return;
+  }
 
+  input.select();
+  input.setSelectionRange(0, 99999);
 
-  traitLine.classList.add("nft-desc", "trait-item");
+  navigator.clipboard.writeText(input.value).then(() => {
+    updateCount("shareCount");
 
-  traitsContainer.appendChild(traitLine);
-}
-}
+    // Show temporary copied text
+    const originalText = "🔗 Copy Link";
+    const btn = document.querySelector("#shareBox button");
+    if (btn) {
+      btn.textContent = "✔ Link Copied";
+      setTimeout(() => btn.textContent = originalText, 1600);
+    }
+  });
+};
+  window.loveThisNFT = () => updateCount("loveCount");
+  window.wishlistThisNFT = () => updateCount("wishCount");
+
+  // ✅ Share via social buttons also counts
+  document.querySelectorAll('.share-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      updateCount("shareCount");
+    });
   });
 
-function copyShareLink() {
-  navigator.clipboard.writeText(window.location.href).then(() => {
-    alert("Share link copied!");
-  });
-}
+  // ✅ Show/hide platform icons
+  function renderPlatformLinks(nft) {
+    const platforms = {
+      "nft-opensea": nft.opensea,
+      "nft-youtube": nft.youtube,
+      "nft-tiktok": nft.tiktok,
+      "nft-x": nft.x,
+      "nft-reddit": nft.reddit,
+      "nft-pinterest": nft.pinterest,
+      "nft-instagram": nft.instagram
+    };
 
-
+    for (const [elId, url] of Object.entries(platforms)) {
+      const el = document.getElementById(elId);
+      if (el) {
+        if (url && url.trim() !== "") {
+          el.href = url;
+          el.style.display = "inline-block";
+        } else {
+          el.style.display = "none";
+        }
+      }
+    }
+  }
 </script>
+
+
+
 <script>
 function toggleShareBox() {
   const shareBox = document.getElementById("shareBox");
@@ -836,16 +1021,7 @@ function toggleShareBox() {
   shareBox.style.display = (shareBox.style.display === "none" || shareBox.style.display === "") ? "block" : "none";
 }
 
-function copyNFTLink() {
-  const input = document.getElementById("shareLink");
-  input.select();
-  input.setSelectionRange(0, 99999);
-  document.execCommand("copy");
 
-  const original = event.target.innerHTML;
-  event.target.innerHTML = "✅ Copied!";
-  setTimeout(() => { event.target.innerHTML = original; }, 1500);
-}
 
 
 document.addEventListener("click", function (e) {
@@ -855,7 +1031,10 @@ document.addEventListener("click", function (e) {
     shareBox.style.display = "none";
   }
 });
+
 </script>
+
+
 
 <a href="https://opensea.io/collection/the-living-word-2025" class="opensea-float" target="_blank" aria-label="OpenSea">
     <img src="opensea.webp" alt="OpenSea">
