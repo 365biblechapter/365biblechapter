@@ -225,10 +225,24 @@
     .opensea-float img:hover {
         transform: scale(1.1);
     }
-@media (max-width: 768px) {
-  #nft-image {
-    max-width: 100%;
-    height: auto;
+@media (max-width: 480px) {
+  #nft-title {
+    font-size: 28px;
+  }
+  #nft-verse {
+    font-size: 16px;
+  }
+  .nft-action-box {
+    padding: 10px;
+  }
+  .action-btn {
+    font-size: 14px;
+    width: 80px;
+    height: 40px;
+  }
+  .social-icons a img {
+    width: 24px;
+    height: 24px;
   }
 }
 .nft-desc {
@@ -636,7 +650,7 @@
   <a id="nft-opensea" href="#" target="_blank"><img src="opensea.webp" alt="OpenSea"></a>
   <a id="nft-youtube" href="#" target="_blank"><img src="YT.webp" alt="YouTube"></a>
   <a id="nft-tiktok" href="#" target="_blank"><img src="tiktok.webp" alt="TikTok"></a>
-  <a id="nft-x" href="#" target="_blank"><img src="x.webp" alt="X"></a>
+  <a id="nft-x" href="#" target="_blank"><img src="twitter.webp" alt="X"></a>
   <a id="nft-reddit" href="#" target="_blank"><img src="reddit.webp" alt="Reddit"></a>
   <a id="nft-pinterest" href="#" target="_blank"><img src="pinterest.webp" alt="Pinterest"></a>
   <a id="nft-instagram" href="#" target="_blank"><img src="instagram.webp" alt="Instagram"></a>
@@ -792,13 +806,15 @@ function closeModal(event) {
 
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  import {
-    getFirestore,
-    doc,
-    getDoc,
-    updateDoc,
-    increment
-  } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  import { getFirestore, doc, getDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+    const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const auth = getAuth(app);
+signInAnonymously(auth).catch((error) => {
+  console.error("Anonymous sign-in failed:", error);
+});
 
   // ✅ Replace this with your actual Firebase config:
   const firebaseConfig = {
@@ -811,8 +827,6 @@ function closeModal(event) {
   measurementId: "G-Y59S65LLWB"
 };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
 
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
@@ -913,9 +927,18 @@ function closeModal(event) {
 
       // ✅ Dynamic SEO Image
       const ogImage = document.querySelector("meta[property='og:image']");
-      if (ogImage && nft.image) {
-        ogImage.setAttribute("content", nft.image);
-      }
+if (ogImage && nft.image) {
+  ogImage.setAttribute("content", nft.image);
+} else {
+  ogImage.setAttribute("content", "https://365biblechapter.com/open-graph.png");
+}
+
+// Add loading spinner
+document.getElementById("nft-image").style.opacity = 0;
+document.getElementById("nft-image").addEventListener("load", () => {
+  document.getElementById("nft-image").style.opacity = 1;
+  document.getElementById("nft-image").style.transition = "opacity 0.3s ease";
+});
 
       // ✅ Load Firebase Counts
       const ref = doc(db, "imageverses", id);
@@ -929,23 +952,47 @@ function closeModal(event) {
     });
 
   // ✅ Action Handlers (Buttons)
+let isRetrying = false;
+
+window.onerror = function(message, source, lineno, colno, error) {
+  console.error("Error:", message, "at", source, "line", lineno, "column", colno);
+  alert("An error occurred. Please try again later.");
+};
+
 async function updateCount(type) {
   if (!id) return;
+  if (isRetrying) return;
+  const button = document.querySelector(`.nft-count-button[onclick="updateCount('${type}')"]`);
+  button.disabled = true;
+  button.textContent = `Updating ${type}...`;
   try {
     console.log(`[ACTION] Updating "${type}" for ID:`, id);
     const ref = doc(db, "imageverses", id);
     await updateDoc(ref, { [type]: increment(1) });
     await loadCounts();
     console.log(`[✅] Updated "${type}" successfully`);
+    button.textContent = type.charAt(0).toUpperCase() + type.slice(1);
   } catch (e) {
     console.error(`[❌] Failed to update "${type}":`, e);
-    // Handle authentication if necessary
-    if (e.code === 'permission-denied') {
-      firebase.auth().signInAnonymously().then(() => {
-        updateCount(type); // Retry after signing in
+    if (e.code === 'permission-denied' && !isRetrying) {
+      isRetrying = true;
+      const auth = getAuth();
+      signInAnonymously(auth).then(() => {
+        updateCount(type).finally(() => {
+          isRetrying = false;
+          button.disabled = false;
+        });
       }).catch((error) => {
         console.error("Anonymous sign-in failed:", error);
+        isRetrying = false;
+        button.disabled = false;
+        button.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+        alert("Failed to update. Please try again.");
       });
+    } else {
+      button.disabled = false;
+      button.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+      alert("Failed to update. Please try again.");
     }
   }
 }
@@ -1011,8 +1058,6 @@ async function updateCount(type) {
   }
 </script>
 
-
-
 <script>
 function toggleShareBox() {
   const shareBox = document.getElementById("shareBox");
@@ -1026,7 +1071,16 @@ function toggleShareBox() {
   document.getElementById("shareTelegram").href = `https://t.me/share/url?url=${encodeURIComponent(link)}`;
   document.getElementById("shareFB").href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;
 
-  shareBox.style.display = (shareBox.style.display === "none" || shareBox.style.display === "") ? "block" : "none";
+shareBox.style.display = (shareBox.style.display === "none" || shareBox.style.display === "") ? "block" : "none";
+  if (shareBox.style.display === "block") {
+    const message = document.createElement("p");
+    message.textContent = "Link copied to clipboard!";
+    message.style.color = "#1fa4f7";
+    message.style.marginTop = "10px";
+    shareBox.appendChild(message);
+    setTimeout(() => message.remove(), 2000);
+    updateCount("shareCount");
+  }
 }
 
 
