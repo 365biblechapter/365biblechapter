@@ -636,7 +636,7 @@
   <a id="nft-opensea" href="#" target="_blank"><img src="opensea.webp" alt="OpenSea"></a>
   <a id="nft-youtube" href="#" target="_blank"><img src="YT.webp" alt="YouTube"></a>
   <a id="nft-tiktok" href="#" target="_blank"><img src="tiktok.webp" alt="TikTok"></a>
-  <a id="nft-x" href="#" target="_blank"><img src="twitter.webp" alt="X"></a>
+  <a id="nft-x" href="#" target="_blank"><img src="x.webp" alt="X"></a>
   <a id="nft-reddit" href="#" target="_blank"><img src="reddit.webp" alt="Reddit"></a>
   <a id="nft-pinterest" href="#" target="_blank"><img src="pinterest.webp" alt="Pinterest"></a>
   <a id="nft-instagram" href="#" target="_blank"><img src="instagram.webp" alt="Instagram"></a>
@@ -801,6 +801,52 @@ function closeModal(event) {
   
 </script>
 
+
+
+
+
+<script>
+function toggleShareBox() {
+  const shareBox = document.getElementById("shareBox");
+  const link = window.location.href;
+  document.getElementById("shareLink").value = link;
+
+
+  document.getElementById("shareX").href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(link)}`;
+  document.getElementById("shareWA").href = `https://wa.me/?text=${encodeURIComponent(link)}`;
+  document.getElementById("shareEmail").href = `mailto:?subject=Check out this NFT&body=${encodeURIComponent(link)}`;
+  document.getElementById("shareTelegram").href = `https://t.me/share/url?url=${encodeURIComponent(link)}`;
+  document.getElementById("shareFB").href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;
+
+  shareBox.style.display = (shareBox.style.display === "none" || shareBox.style.display === "") ? "block" : "none";
+}
+
+
+
+
+document.addEventListener("click", function (e) {
+  const shareBox = document.getElementById("shareBox");
+  const button = document.getElementById("shareButton");
+  if (shareBox.style.display === "block" && !shareBox.contains(e.target) && !button.contains(e.target)) {
+    shareBox.style.display = "none";
+  }
+});
+
+</script>
+
+
+
+<a href="https://opensea.io/collection/the-living-word-2025" class="opensea-float" target="_blank" aria-label="OpenSea">
+    <img src="opensea.webp" alt="OpenSea">
+</a>
+
+<div id="zoomModal" class="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation();">
+    <button class="close-btn" onclick="closeModal(event)">✖</button>
+    <img id="modalImg" src="" alt="Zoomed Image">
+  </div>
+</div>
+
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
   import {
@@ -824,8 +870,23 @@ function closeModal(event) {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id");
+
+// ✅ Fetch the NFT ID from URL query string
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+if (!id) {
+  // Show a "Not Found" message or redirect back to gallery
+  document.body.innerHTML = `
+    <div style="text-align:center; padding: 80px;">
+      <h2>NFT Not Found</h2>
+      <p>The NFT you are looking for does not exist or the ID is missing.</p>
+      <a href="nft-gallery.html" style="display: inline-block; margin-top: 20px; background: #87cefa; color: #000; padding: 10px 20px; text-decoration: none; border-radius: 8px;">← Back to Gallery</a>
+    </div>
+  `;
+  throw new Error("Missing or invalid NFT ID");
+}
+
 
   // ✅ Fetch and check NFT data
   fetch("https://365biblechapter.com/data.json")
@@ -940,7 +1001,7 @@ function closeModal(event) {
 
   // ✅ Action Handlers (Buttons)
   async function updateCount(type) {
-  if (!id) return;
+  if (!id || !['loveCount', 'wishCount', 'shareCount'].includes(type)) return;
 
   const ref = doc(db, "imageverses", id);
   const snap = await getDoc(ref);
@@ -955,17 +1016,20 @@ function closeModal(event) {
       shareCount: type === 'shareCount' ? current + 1 : existing.shareCount ?? 0
     }, { merge: true });
 
-    loadCounts();
+    await loadCounts(); // ✅ re-fetches updated value
   } else {
-    // Create doc with count if not exists
     await setDoc(ref, {
       loveCount: type === 'loveCount' ? 1 : 0,
       wishCount: type === 'wishCount' ? 1 : 0,
       shareCount: type === 'shareCount' ? 1 : 0
     });
 
-    loadCounts();
+    await loadCounts();
   }
+  const button = document.querySelector(`[data-action="${type}"]`);
+if (button) {
+  button.disabled = true;
+}
 }
 
   window.copyNFTLink = () => {
@@ -1027,52 +1091,8 @@ function closeModal(event) {
       }
     }
   }
+  
 </script>
-
-
-
-<script>
-function toggleShareBox() {
-  const shareBox = document.getElementById("shareBox");
-  const link = window.location.href;
-  document.getElementById("shareLink").value = link;
-
-
-  document.getElementById("shareX").href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(link)}`;
-  document.getElementById("shareWA").href = `https://wa.me/?text=${encodeURIComponent(link)}`;
-  document.getElementById("shareEmail").href = `mailto:?subject=Check out this NFT&body=${encodeURIComponent(link)}`;
-  document.getElementById("shareTelegram").href = `https://t.me/share/url?url=${encodeURIComponent(link)}`;
-  document.getElementById("shareFB").href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}`;
-
-  shareBox.style.display = (shareBox.style.display === "none" || shareBox.style.display === "") ? "block" : "none";
-}
-
-
-
-
-document.addEventListener("click", function (e) {
-  const shareBox = document.getElementById("shareBox");
-  const button = document.getElementById("shareButton");
-  if (shareBox.style.display === "block" && !shareBox.contains(e.target) && !button.contains(e.target)) {
-    shareBox.style.display = "none";
-  }
-});
-
-</script>
-
-
-
-<a href="https://opensea.io/collection/the-living-word-2025" class="opensea-float" target="_blank" aria-label="OpenSea">
-    <img src="opensea.webp" alt="OpenSea">
-</a>
-
-<div id="zoomModal" class="modal" onclick="closeModal()">
-  <div class="modal-content" onclick="event.stopPropagation();">
-    <button class="close-btn" onclick="closeModal(event)">✖</button>
-    <img id="modalImg" src="" alt="Zoomed Image">
-  </div>
-</div>
-
   
 </div>
 </body>
