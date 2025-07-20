@@ -636,7 +636,7 @@
   <a id="nft-opensea" href="#" target="_blank"><img src="opensea.webp" alt="OpenSea"></a>
   <a id="nft-youtube" href="#" target="_blank"><img src="YT.webp" alt="YouTube"></a>
   <a id="nft-tiktok" href="#" target="_blank"><img src="tiktok.webp" alt="TikTok"></a>
-  <a id="nft-x" href="#" target="_blank"><img src="twitter.webp" alt="X"></a>
+  <a id="nft-x" href="#" target="_blank"><img src="x.webp" alt="X"></a>
   <a id="nft-reddit" href="#" target="_blank"><img src="reddit.webp" alt="Reddit"></a>
   <a id="nft-pinterest" href="#" target="_blank"><img src="pinterest.webp" alt="Pinterest"></a>
   <a id="nft-instagram" href="#" target="_blank"><img src="instagram.webp" alt="Instagram"></a>
@@ -807,8 +807,7 @@ function closeModal(event) {
     getFirestore,
     doc,
     getDoc,
-    updateDoc,
-    increment
+    setDoc
   } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
   // ✅ Replace this with your actual Firebase config:
@@ -942,14 +941,30 @@ function closeModal(event) {
   // ✅ Action Handlers (Buttons)
   async function updateCount(type) {
   if (!id) return;
-  try {
-    console.log(`[ACTION] Updating "${type}" for ID:`, id);
-    const ref = doc(db, "imageverses", id);
-    await updateDoc(ref, { [type]: increment(1) });
-    await loadCounts();
-    console.log(`[✅] Updated "${type}" successfully`);
-  } catch (e) {
-    console.error(`[❌] Failed to update "${type}":`, e);
+
+  const ref = doc(db, "imageverses", id);
+  const snap = await getDoc(ref);
+
+  if (snap.exists()) {
+    const existing = snap.data();
+    const current = existing[type] ?? 0;
+
+    await setDoc(ref, {
+      loveCount: type === 'loveCount' ? current + 1 : existing.loveCount ?? 0,
+      wishCount: type === 'wishCount' ? current + 1 : existing.wishCount ?? 0,
+      shareCount: type === 'shareCount' ? current + 1 : existing.shareCount ?? 0
+    }, { merge: true });
+
+    loadCounts();
+  } else {
+    // Create doc with count if not exists
+    await setDoc(ref, {
+      loveCount: type === 'loveCount' ? 1 : 0,
+      wishCount: type === 'wishCount' ? 1 : 0,
+      shareCount: type === 'shareCount' ? 1 : 0
+    });
+
+    loadCounts();
   }
 }
 
