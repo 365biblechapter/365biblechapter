@@ -515,12 +515,14 @@ document.addEventListener("contextmenu", function (event) {
         card.className = "card";
 
         card.innerHTML = `
-          <a href="nft.html?id=${id}">
-            <img src="${nft.image}" alt="${nft.title}">
-            <div class="card-title">${nft.title}</div>
-            <div class="card-verse">${nft.verse.split("-").pop().trim()}</div>
-          </a>
-        `;
+  <a href="nft.html?id=${id}">
+    <img src="${nft.image}" alt="${nft.title}">
+    <div class="card-title">${nft.title}</div>
+    <div class="card-verse">${
+      (nft.verse.match(/([A-Za-z]+(?: [A-Za-z]+)* \d+:\d+(?:[-–]\d+)? KJV)$/) || [nft.verse])[1]
+    }</div>
+  </a>
+`;
 
         gallery.appendChild(card);
 
