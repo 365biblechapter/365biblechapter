@@ -1108,6 +1108,15 @@ document.addEventListener("contextmenu", function (event) {
   }
 </style>
 
+<script>
+  const redirected = sessionStorage.redirect;
+  if (redirected) {
+    console.log("User was redirected from missing path:", redirected);
+    // You can show a custom error message here if desired
+    sessionStorage.removeItem('redirect');
+  }
+</script>
+
 <div id="zoomModal" class="modal" onclick="closeModal()">
     <div class="modal-content">
         <button class="close-btn" onclick="closeModal(event)">✖</button>
