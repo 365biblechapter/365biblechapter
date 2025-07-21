@@ -369,7 +369,23 @@ footer.footer {
     </div>
 
 <section id="nft-gallery-section" style="padding: 100px 20px; background: #f0f8ff; color: #000; text-align: center;">
-  <h1 style="font-size: 42px; font-weight: bold;">The Living Word – NFT Gallery</h1>
+  <h1 style="font-size: 42px; font-weight: bold;">The Living Word - NFT Gallery</h1>
+
+  <section class="nft-intro" style="text-align: center; max-width: 800px; margin: 0 auto 50px; padding: 0 20px; font-size: 18px; color: #333;">
+  <p>
+    The Living Word is a prophetic NFT collection born from Scripture and verses. Every image belongs to one of three divine tiers: Glory, Fire, or Light, each revealing a unique part of God’s nature. 
+    <a href="https://opensea.io/collection/the-living-word-2025" target="_blank" style="color: #0a4fa5; text-decoration: underline; font-weight: bold;">Visit Opensea Collection</a>.
+  </p>
+  <br>
+  <p>
+    <strong>🟨 Glory Tier</strong>: One of a kind visions of the throne, majesty, and the coming King.  
+    <em>(Edition: 1 of 1)</em><br>
+    <strong>🟥 Fire Tier</strong>: Images of judgment, refinement, and redemption.  
+    <em>(Edition: 1 of 3)</em><br>
+    <strong>🟦 Light Tier</strong>: Gentle scenes of daily grace, creation, and divine presence.  
+    <em>(Edition: 1 of 7)</em>
+  </p>
+</section>
 
 <div class="filters">
   <div class="filter-box">
@@ -505,7 +521,12 @@ document.addEventListener("contextmenu", function (event) {
 
       let totalShown = 0; 
 
-      for (const [id, nft] of Object.entries(data)) { 
+      const sortedEntries = Object.entries(data).sort((a, b) => {
+  const getNumber = key => parseInt(key.match(/\d+/)[0]);
+  return getNumber(b[0]) - getNumber(a[0]); // Newest first
+});
+
+for (const [id, nft] of sortedEntries) {
         if ((rarity && nft.traits.Rarity !== rarity) || (book && nft.traits.Book !== book)) continue;
 
         totalShown++;
